@@ -30,3 +30,9 @@ group :development do
   # gem "spring"
 end
 
+gem "pry-rails"
+gem "http"
+
+group :production do
+  gem 'unicorn', '6.1.0'
+end

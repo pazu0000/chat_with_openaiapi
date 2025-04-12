@@ -73,6 +73,10 @@ textarea {
     max-height: 300px;
     width: 100%;
     flex-grow: 1;
+    background-color: #fff; 
+    color: #333; 
+  
+    
 }
 
 textarea:focus {
