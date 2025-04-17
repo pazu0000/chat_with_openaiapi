@@ -64,27 +64,21 @@ LINE上からも感情を記録できるよう、
 ```bash
 git clone https://github.com/ユーザー名/リポジトリ名.git
 cd リポジトリ名
+
 2. 必要なGemをインストール
-bash
-コピーする
-編集する
 bundle install
+
 3. データベース作成＆マイグレーション
-bash
-コピーする
-編集する
-rails db:create db:migrate
+rails db:migrate
+
 4. .envファイルを作成し、OpenAI APIキーを設定
-env
-コピーする
-編集する
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 5. サーバー起動
-bash
-コピーする
-編集する
 rails s
+
 ブラウザで http://localhost:3000 にアクセスして確認できます。
+
 
 🗓 今後の開発予定
 🤖 LINE Bot連携
