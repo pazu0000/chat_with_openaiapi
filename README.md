@@ -47,18 +47,33 @@ LINE上からも感情を記録できるよう、
 | デプロイ | Render（予定） |
 
 ---
-
 ## 🚀 セットアップ方法（開発者向け）
 
-```bash
-$ git clone https://github.com/pazu0000/commbridge.git
-$ cd commbridge
-$ bundle install
-$ rails db:create db:migrate
-$ rails s
-※ .env に OpenAI APIキーを記述
+### 前提条件
+- Ruby 3.x
+- Rails 7.x
+- PostgreSQL（またはSQLite）
 
-📷 スクリーンショット（※準備できたら挿入）
+### セットアップ手順
+
+bash
+# リポジトリをクローン
+$ git clone https://github.com/ユーザー名/リポジトリ名.git
+$ cd リポジトリ名
+
+# 必要なGemをインストール
+$ bundle install
+
+# データベース作成＆マイグレーション
+$ rails db:create db:migrate
+
+# .envファイルを作成し、OpenAI APIキーを設定
+# 例：
+# OPENAI_API_KEY=sk-xxxxxx
+
+# サーバー起動
+$ rails s
+
 🗓 今後の開発予定
 LINE Bot連携
 - ユーザーがLINE上から感情を投稿できるようにし、AIがリアルタイムで前向きなフィードバックを返す仕組みを構築。
