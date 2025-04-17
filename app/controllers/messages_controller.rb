@@ -7,9 +7,8 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
-    # binding.pry
     response = openai_api_call(@message.prompt)
-   
+    response_body = JSON.parse(response_body)
   end
 
   private

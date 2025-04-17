@@ -1,24 +1,85 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 🤖 感情変換AIアプリ「CommBridge（仮）」
 
-Things you may want to cover:
+## 📌 概要
 
-* Ruby version
+本アプリは、職場での目上の方とのコミュニケーションにおいて、  
+前向きな言葉や視点を見つける手助けをするための生成AI活用ツールです。
 
-* System dependencies
+生成AI（ChatGPT API）を用いて日々の感情をログ化し、  
+ネガティブな表現をポジティブに変換することで、関係構築や自己成長をサポートします。
 
-* Configuration
+---
 
-* Database creation
+## 🧩 主な機能
 
-* Database initialization
+### 🌈 感情ログ機能（Emotion Log）
+日々の出来事や気持ちを自由に記録することで、  
+自己理解・振り返りをサポート。
 
-* How to run the test suite
+### 💬 ポジ変機能（ポジティブ変換AI）
+AIが前向きな言い換えを提案。  
+ネガティブな感情を客観的に整理しやすくなります。
 
-* Services (job queues, cache servers, search engines, etc.)
+### 🗂 履歴・一覧表示
+過去の記録とAIの返答を一覧表示。  
+自分の成長や傾向も可視化できます。
 
-* Deployment instructions
+### 🎮 ゲーミフィケーション（開発予定）
+継続利用を楽しめるよう、  
+ログ記録やポジティブ変換に応じたスコアやバッジ機能を計画中。
 
-* ...
+### 🤖 LINE Bot連携（開発中）
+LINE上からも感情を記録できるよう、  
+生成AIと接続したBotの開発を進行中。
+
+---
+
+## 🛠 使用技術
+
+| 分類 | 技術 |
+|------|------|
+| フロント | HTML / CSS / JavaScript / Turbo |
+| バックエンド | Ruby on Rails |
+| データベース | PostgreSQL |
+| 外部API | OpenAI API（gpt-3.5） / LINE Messaging API（予定） |
+| ユーザー認証 | Devise |
+| デプロイ | Render（予定） |
+
+---
+
+## 🚀 セットアップ方法（開発者向け）
+
+```bash
+$ git clone https://github.com/pazu0000/commbridge.git
+$ cd commbridge
+$ bundle install
+$ rails db:create db:migrate
+$ rails s
+※ .env に OpenAI APIキーを記述
+
+📷 スクリーンショット（※準備できたら挿入）
+🗓 今後の開発予定
+LINE Bot連携
+- ユーザーがLINE上から感情を投稿できるようにし、AIがリアルタイムで前向きなフィードバックを返す仕組みを構築。
+- Webアプリと連携し、手軽に日々の記録・リフレクションが可能に。
+
+
+目上の方別フィードバックトーンの切り替え
+- 登録された“目上の方”ごとに傾向（例：論理重視型／共感重視型など）を設定。
+- AIの返答スタイルを柔軟に切り替えることで、個別性のある対応を実現。
+
+感情スコアの自動算出
+- 感情ログの内容や記録頻度、ポジティブ変換率などをもとに独自スコアを算出。
+- 自分の心の状態や人間関係の変化を“見える化”します。
+
+
+管理者画面・分析グラフの追加
+- 感情の傾向や改善状況をグラフで可視化。
+- 長期的な変化や、やりとりの質の向上を確認できるようにします。
+
+🙋‍♂️ 作者
+福田 健史（@pazu0000）
+Webエンジニア志望／生成AI×感情ケアアプリを開発中
+
+
